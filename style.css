@@ -41,6 +41,7 @@ html {
     cursor: pointer;
     transform: scale(1.0);
     transition: all linear .4s;
+    border-radius: 25px;
 }
 
 .img-pequena:hover {
@@ -70,7 +71,8 @@ html {
 }
 
 .modal-img {
-    width: 26%
+    width: 26%;
+    border-radius: 25px;
 }
 
 .botao-fechar {
@@ -81,6 +83,7 @@ html {
     right: 20px;
     padding: 5px 10px;
     font-size: 25pt;
+    border-radius: 15px;
 }
 
 .botao-fechar:hover {
