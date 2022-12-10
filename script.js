@@ -46,3 +46,21 @@ function fechaModal2() {
 function fechaModal3() {
     modal3.id = 'modal03';
 }
+
+// =============== fechar modal com esc
+
+window.onkeydown = function (event) {
+    if (event.keyCode == 27) {
+        modal1.id = 'modal01';
+        modal2.id = 'modal02';
+        modal3.id = 'modal03';
+    }
+};
+
+// =============== fechar modal com clique ou toque
+
+window.onmousedown = function () {
+        modal1.id = 'modal01';
+        modal2.id = 'modal02';
+        modal3.id = 'modal03';
+};
