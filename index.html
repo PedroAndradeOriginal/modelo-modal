@@ -2,29 +2,53 @@
 <html lang="pt-br">
 
 <head>
+    <title>Modal</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>teste</title>
 </head>
 
 <body>
 
-    <div class="card-img01">
-        <img src="img-card.png" class="img-pequena">
+    <!-- ================== cards ==================-->
+    <div class="container">
+        <div id="card01" class="card-img">
+            <img src="01.png" class="img-pequena">
+        </div>
+        <div id="card02" class="card-img">
+            <img src="02.png" class="img-pequena">
+        </div>
+        <div id="card03" class="card-img">
+            <img src="03.png" class="img-pequena">
+        </div>
     </div>
 
-    <div class="modal">
+    <!-- ================== modals ==================-->
+
+    <div id="modal01" class="modal">
         <div class="conteudo-modal">
             <img class="modal-img" src="img01.jpeg">
             <img class="modal-img" src="img02.jpeg">
             <img class="modal-img" src="img03.jpeg">
+        </div>
+        <span id="botao-fechar01" class="botao-fechar">&times;</span>
+    </div>
+    <div id="modal02" class="modal">
+        <div class="conteudo-modal">
             <img class="modal-img" src="img04.jpeg">
             <img class="modal-img" src="img05.jpeg">
             <img class="modal-img" src="img06.jpeg">
         </div>
-        <span id="botao-fechar">&times;</span>
+        <span id="botao-fechar02" class="botao-fechar">&times;</span>
+    </div>
+    <div id="modal03" class="modal">
+        <div class="conteudo-modal">
+            <img class="modal-img" src="img07.jpeg">
+            <img class="modal-img" src="img08.jpeg">
+            <img class="modal-img" src="img09.jpeg">
+        </div>
+        <span id="botao-fechar03" class="botao-fechar">&times;</span>
     </div>
 
     <script src="script.js"></script>
