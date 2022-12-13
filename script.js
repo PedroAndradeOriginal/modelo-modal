@@ -1,4 +1,4 @@
-// ========= declarando os arrays
+// declarando os arrays
 
 const cards = [];
 cards.push(document.getElementById("card01"), document.getElementById("card02"), document.getElementById("card03"));
@@ -7,7 +7,7 @@ modals.push(document.getElementById("modal01"), document.getElementById("modal02
 const botoes = [];
 botoes.push(document.getElementById("botao-fechar01"), document.getElementById("botao-fechar02"), document.getElementById("botao-fechar03"));
 
-// ======== laço para escutar clique nos cards específicos, abrir e fechar o modal
+// laço para escutar clique nos cards específicos, abrir e fechar o modal
 
 for (let i = 0; i < cards.length; i++) {
 
@@ -19,17 +19,20 @@ for (let i = 0; i < cards.length; i++) {
     };
 
     function fechaModal() {
-        modals[i].removeAttribute("id", "modal-visivel");
+        modals[i].removeAttribute("id", "");
     };
 
-    // ========== fechar modal apertando no esc ou em clicando em qualquer lugar - Obs: Só está funcionado no último card ¯\_(ツ)_/¯
+    // fechar modal apertando no esc ou em clicando em qualquer lugar
+
+    modals[i].addEventListener('click', function () {
+        fechaModal();
+    });
 
     window.onkeydown = function (event) {
         if (event.keyCode == 27) {
-            fechaModal();
+            modals[0].removeAttribute("id", "");
+            modals[1].removeAttribute("id", "");
+            modals[2].removeAttribute("id", "");
         }
-    };
-    window.onmousedown = function () {
-        fechaModal();
     };
 };
