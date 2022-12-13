@@ -15,10 +15,11 @@ for (let i = 0; i < cards.length; i++) {
     }
 
     function fechaModal() {
-        modals[i].setAttribute("id", "modal01");
+        modals[i].setAttribute("id", "modal01"); //gambiarra temporária
     }
+}
 
-    window.onkeydown = function (event) {
+/*window.onkeydown = function (event) {
         if (event.keyCode == 27) {
             fechaModal ();
         }
@@ -26,5 +27,4 @@ for (let i = 0; i < cards.length; i++) {
     
     window.onmousedown = function () {
         fechaModal ();
-    };
-}
+    };*/
