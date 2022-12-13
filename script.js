@@ -1,66 +1,30 @@
-// ========== declarando variáveis
+const cards = [];
+cards.push(document.getElementById("card01"), document.getElementById("card02"), document.getElementById("card03"));
+const modals = [];
+modals.push(document.getElementById("modal01"), document.getElementById("modal02"), document.getElementById("modal03"));
+const botoes = [];
+botoes.push(document.getElementById("botao-fechar01"), document.getElementById("botao-fechar02"), document.getElementById("botao-fechar03"));
 
-let card1 = document.querySelector('#card01');
-let card2 = document.querySelector('#card02');
-let card3 = document.querySelector('#card03');
+for (let i = 0; i < cards.length; i++) {
+    
+    cards[i].addEventListener('click', abreModal, false);
+    botoes[i].addEventListener('click', fechaModal, false);
 
-let modal1 = document.querySelector('#modal01');
-let modal2 = document.querySelector('#modal02');
-let modal3 = document.querySelector('#modal03');
-
-let botao1 = document.querySelector('#botao-fechar01');
-let botao2 = document.querySelector('#botao-fechar02');
-let botao3 = document.querySelector('#botao-fechar03');
-
-// ============= desclarando eventos
-
-card1.addEventListener('click', abreModal1, false);
-card2.addEventListener('click', abreModal2, false);
-card3.addEventListener('click', abreModal3, false);
-botao1.addEventListener('click', fechaModal1, false);
-botao2.addEventListener('click', fechaModal2, false);
-botao3.addEventListener('click', fechaModal3, false);
-
-// =============== funções para abrir modal
-
-function abreModal1() {
-    modal1.id = 'modal-visivel';
-}
-
-function abreModal2() {
-    modal2.id = 'modal-visivel';
-}
-
-function abreModal3() {
-    modal3.id = 'modal-visivel';
-}
-
-// =============== funções para fechar modal
-
-function fechaModal1() {
-    modal1.id = 'modal01';
-}
-function fechaModal2() {
-    modal2.id = 'modal02';
-}
-function fechaModal3() {
-    modal3.id = 'modal03';
-}
-
-// =============== fechar modal com esc
-
-window.onkeydown = function (event) {
-    if (event.keyCode == 27) {
-        modal1.id = 'modal01';
-        modal2.id = 'modal02';
-        modal3.id = 'modal03';
+    function abreModal() {
+        modals[i].setAttribute("id", "modal-visivel");
     }
-};
 
-// =============== fechar modal com clique ou toque
+    function fechaModal() {
+        modals[i].setAttribute("id", "modal01");
+    }
 
-window.onmousedown = function () {
-        modal1.id = 'modal01';
-        modal2.id = 'modal02';
-        modal3.id = 'modal03';
-};
+    window.onkeydown = function (event) {
+        if (event.keyCode == 27) {
+            fechaModal ();
+        }
+    };
+    
+    window.onmousedown = function () {
+        fechaModal ();
+    };
+}
